@@ -13,7 +13,7 @@ mongoose.connect("mongodb://localhost/auth_demo_app", {useNewUrlParser:
 true});
 
 app.use(require("express-session")({
-  secret: "Secret Passage",
+  secret: "${{ SECRET_TOKEN }}",
   resave: false,
   saveUninitialized: false
 }));
